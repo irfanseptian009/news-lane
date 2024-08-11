@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative bg-white shadow dark:bg-gray-800">
+    <nav className="relative  shadow dark:bg-gray-800">
       <style>
         {`
                     .scroll-hidden::-webkit-scrollbar {
