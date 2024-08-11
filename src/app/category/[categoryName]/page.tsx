@@ -17,10 +17,7 @@ import Footer from "./../../../components/Footer";
 
 async function getData(categoryName: string) {
   const res = await fetch(
-    `https://api.nytimes.com/svc/topstories/v2/${categoryName}.json?api-key=${process.env.NEXT_PUBLIC_API_KEY}`,
-    {
-      cache: "no-store",
-    }
+    `https://api.nytimes.com/svc/topstories/v2/${categoryName}.json?api-key=${process.env.NEXT_PUBLIC_API_KEY}`
   );
 
   if (!res.ok) {
