@@ -122,7 +122,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="py-3 overflow-y-auto whitespace-nowrap scroll-hidden font-light border-t-4 mt-10 -mb-14">
+        <div className="py-3 overflow-y-auto whitespace-nowrap scroll font-light border-t-4 mt-10 -mb-14">
           <a
             className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
             href="/category/arts"
