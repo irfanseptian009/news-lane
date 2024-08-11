@@ -26,7 +26,7 @@ const Navbar = () => {
                 alt=""
               />
               <a
-                href="#"
+                href="/"
                 className="flex flex-row font-serif text-xl lg:text-2xl  font-extrabold text-red-700"
               >
                 LANE
@@ -35,7 +35,7 @@ const Navbar = () => {
             <div className=" flex-col hidden lg:ml-96 md:ml-60 lg:inline-flex font-serif font-extrabold md:inline-flex md:flex-row ">
               {" "}
               <a
-                href="#"
+                href="/"
                 className="text-gray-800 transition-colors duration-300 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6"
               >
                 home

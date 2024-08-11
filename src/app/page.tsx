@@ -40,9 +40,9 @@ export default function Home() {
   console.log(data);
 
   const cardSkeleton = (
-    <Card className="w-[400px] ">
+    <Card className="w-[300px] lg:w-[400px] md:w-[400px] max-w-sm rounded overflow-hidden shadow-lg block">
       <CardContent className="flex flex-col space-y-3">
-        <Skeleton className="h-[225px] w-full rounded-md" />
+        <Skeleton className="h-[225px] w-full rounded-md " />
         <div className="space-y-2">
           <Skeleton className="h-4 w-full" />
           <Skeleton className="h-4 w-4/5" />
@@ -54,6 +54,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
+
       <div className="px-14 py-14 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
         {isLoading
           ? Array.from({ length: 20 }).map((_, index) => (
@@ -61,7 +62,7 @@ export default function Home() {
             ))
           : data?.results.map((result) => (
               <Link key={result.id} href={result.url} legacyBehavior passHref>
-                <a className="max-w-sm rounded overflow-hidden shadow-lg block">
+                <a className="max-w-sm rounded overflow-hidden shadow-lg block transition-transform duration-300 hover:scale-105">
                   {result.multimedia && result.multimedia.length > 0 && (
                     <Image
                       src={result.multimedia[1].url}
@@ -71,6 +72,14 @@ export default function Home() {
                     />
                   )}
                   <div className="px-6 py-4">
+                    {" "}
+                    <p className="text-xs text-gray-400 mt-2">
+                      {new Date(result.published_date).toLocaleDateString()} -{" "}
+                      {result.section}
+                    </p>
+                    {result.byline && (
+                      <p className="text-sm text-blue-500 mt-1">{result.byline}</p>
+                    )}
                     <div className="font-bold text-xl mb-2">{result.title}</div>
                     <p className="text-gray-700 text-base">{result.abstract}</p>
                   </div>

@@ -70,7 +70,7 @@ export default function Page({ params }: { params: { categoryName: string } }) {
           {params.categoryName.toUpperCase()} NEWS
         </h2>
 
-        <div className="px-14 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-t">
+        <div className="px-14 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-t ">
           {isLoading ? (
             Array.from({ length: 20 }).map((_, index) => (
               <div key={index}>{cardSkeleton}</div>
@@ -80,7 +80,7 @@ export default function Page({ params }: { params: { categoryName: string } }) {
           ) : data && data.results.length > 0 ? (
             data.results.map((result) => (
               <Link key={result.uri} href={result.url} legacyBehavior passHref>
-                <Card className="max-w-sm rounded overflow-hidden shadow-xl block">
+                <Card className="max-w-sm rounded overflow-hidden shadow-xl block transition-transform duration-300 hover:scale-105">
                   {result.multimedia?.[1]?.url && (
                     <Image
                       src={result.multimedia[1].url}
@@ -96,7 +96,7 @@ export default function Page({ params }: { params: { categoryName: string } }) {
                       {result.section}
                     </p>
                     {result.byline && (
-                      <p className="text-sm text-blue-500 mt-1">By {result.byline}</p>
+                      <p className="text-sm text-blue-500 mt-1">{result.byline}</p>
                     )}
                     <CardTitle className="font-bold text-xl mb-2">
                       {result.title}
