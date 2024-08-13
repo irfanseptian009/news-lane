@@ -66,7 +66,7 @@ export default function Page({ params }: { params: { categoryName: string } }) {
     <>
       <NavBar />{" "}
       <section className="">
-        <h2 className="mt-14 -mb-8 font-serif border-b border-black mx-14  ">
+        <h2 className="mt-5 -mb-8 font-serif border-b border-black mx-14  ">
           {params.categoryName.toUpperCase()} NEWS
         </h2>
 

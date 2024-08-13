@@ -15,8 +15,8 @@ const Navbar = () => {
                 `}
       </style>
 
-      <div className="container px-6 py-3 mx-auto ">
-        <div className="flex  lg:-mt-4 md-mt-4 -mb-6 lg:-mb-4 flex-col md:flex-row md:justify-between md:items-center">
+      <div className="container px-6 py-1 mx-auto ">
+        <div className="flex     flex-col md:flex-row md:justify-between md:items-center">
           <div className="flex items-center justify-between">
             <div className="flex  items-center">
               {" "}
@@ -38,25 +38,25 @@ const Navbar = () => {
                 href="/"
                 className="text-gray-800 transition-colors duration-300 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6"
               >
-                home
+                Home
               </a>
               <a
                 href="#"
                 className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
               >
-                features
+                Features
               </a>
               <a
                 href="#"
                 className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
               >
-                pricing
+                Pricing
               </a>
               <a
                 href="#"
                 className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
               >
-                blog
+                Blog
               </a>
             </div>
             <div className="flex lg:hidden md:hidden">
@@ -89,7 +89,7 @@ const Navbar = () => {
           </div>
 
           <div
-            className={`absolute inset-x-0 z-20 w-full px-6 py-2 transition-all duration-300 ease-in-out bg-white top-16 dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:flex md:items-center ${
+            className={`absolute inset-x-0 z-20 w-full px-6 py-2 -mt-7 transition-all duration-300 ease-in-out bg-white top-16 dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:flex md:items-center ${
               isOpen ? "translate-x-0 opacity-100" : "opacity-0 -translate-x-full"
             }`}
           >
@@ -122,7 +122,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="py-3 overflow-y-auto whitespace-nowrap scroll font-light border-t-4 mt-10 -mb-14">
+        <div className="py-1 rounded-lg bg-gray-50 overflow-y-auto whitespace-nowrap scroll font-light border-t-4  ">
           <a
             className="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0"
             href="/category/arts"
